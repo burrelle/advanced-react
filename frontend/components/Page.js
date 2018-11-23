@@ -27,31 +27,32 @@ const Inner = styled.div`
 injectGlobal`
   @font-face {
     font-family: 'radnika_next';
-    src: url('/static/radnikanext-medium-webfont.woff2')
-    format('woff2');
+    src: url('/static/radnikanext-medium-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
   }
-  html{
+  html {
     box-sizing: border-box;
     font-size: 10px;
   }
   *, *:before, *:after {
     box-sizing: inherit;
   }
-  body{
+  body {
     padding: 0;
     margin: 0;
     font-size: 1.5rem;
     line-height: 2;
+    font-family: 'radnika_next';
   }
-  a{
+  a {
     text-decoration: none;
     color: ${theme.black};
   }
+  button {  font-family: 'radnika_next'; }
 `;
 
-export default class Page extends Component {
+class Page extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
@@ -64,3 +65,5 @@ export default class Page extends Component {
     );
   }
 }
+
+export default Page;
